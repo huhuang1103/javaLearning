@@ -1,10 +1,10 @@
-package com.huh.demo;
+package com.huh.algorithm;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class AlgorithmApplicationTests {
 
     @Test
     void contextLoads() {
