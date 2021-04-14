@@ -1,5 +1,7 @@
 package com.huh.dsa.ds.list;
 
+import java.util.LinkedList;
+
 /**
  * @author huh
  * @version 1.0
@@ -16,16 +18,16 @@ public class MyLinkedList {
             this.next = next;
         }
     }
-    protected transient int size;
+    transient int size;
 
-    protected Node head,tail;
+    transient Node head,tail;
 
     /** Initialize your data structure here. */
     public MyLinkedList() {
-        this.size = 0;
-        head = new Node(null,null);
-        tail = new Node(null,null);
-        head.next = tail;
+//        this.size = 0;
+//        head = new Node(null,null);
+//        tail = new Node(null,null);
+//        head.next = tail;
     }
 
     public boolean isEmpty(){
@@ -50,20 +52,24 @@ public class MyLinkedList {
 
     /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
     public void addAtHead(int val) {
-        Node newNode = new Node(val,head.next);
-        head.next = newNode;
+
+        final Node f = head;
+        final Node newNode = new Node(val, f);
+        head = newNode;
+        if (f == null)
+            head = newNode;
         size++;
     }
 
     /** Append a node of value val to the last element of the linked list. */
     public  void addAtTail(int val) {
-        Node l = node(size);
-        Node newNode = new Node(val,tail);
-        if(l == null){
+        final Node l = tail;
+        final Node newNode = new Node(val, tail);
+        tail = newNode;
+        if (l == null)
             head = newNode;
-        }else{
+        else
             l.next = newNode;
-        }
         size++;
     }
 
@@ -88,8 +94,7 @@ public class MyLinkedList {
 
     }
 
-    public  void addBefore(int val,Node next){
-        Node newNode = new Node(val,next);
+    public  void addBefore(int val,Node succ){
         size++;
     }
 
