@@ -1,4 +1,6 @@
-package com.huh.dsa.ds;
+package com.huh.dsa.ds.list;
+
+import com.huh.dsa.ds.*;
 
 /******************************************************************************************
  * Data Structures in C++

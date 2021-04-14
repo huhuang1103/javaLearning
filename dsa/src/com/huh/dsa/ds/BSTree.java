@@ -1,5 +1,8 @@
 package com.huh.dsa.ds;
 
+import com.huh.dsa.ds.list.List;
+import com.huh.dsa.ds.list.List_DLNode;
+
 /******************************************************************************************
  * Data Structures in C++
  * ISBN: 7-302-33064-6 & 7-302-33065-3 & 7-302-29652-2 & 7-302-26883-3
